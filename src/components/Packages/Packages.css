@@ -1,0 +1,87 @@
+/* Colors and Styling */
+:root {
+    --primaryColor: hsl(199, 100%, 33%);
+    --secondaryColor: hsl(187, 83%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(207, 96%, 30%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 10%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDean: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBg: rgb(223, 223, 233);
+    --cardHover: rgb(255, 255, 255);
+}
+
+.main {
+    width: 100%;
+
+    .packageTitle {
+        .title {
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background: linear-gradient(to right, hsl(187, 85%, 43%), hsl(207, 96%, 30%));
+                height: 4px;
+                left: 0;
+                bottom: 5px;
+            }
+        }
+    }
+
+    .card {
+        padding: 1rem;
+        background: linear-gradient(to right, hsla(0, 2%, 72%, 0.733), hsla(207, 96%, 30%, 0.63));
+        border-radius: 10px;
+        margin: 1rem;
+
+        &:hover {
+            background: var(--cardHover);
+            box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+            transition: .3s ease;
+        }
+
+        .icon {
+            width: 80%;
+            height: 100%;
+            margin-top: 1rem;
+            color: rgb(3, 94, 63);
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            font-family: monospace;
+            padding-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 15px;
+            padding-bottom: 2rem;
+            color: var(--textColor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .anchor {
+            color: var(--primaryColor)
+        }
+
+        .anchor:hover {
+            color: var(--secondaryColor);
+
+        }
+
+    }
+}
